@@ -13,19 +13,15 @@ body{
     justify-content: space-evenly;
 }
 
-.username, .rn{
-    padding: 40px;
+form{
+    width: 60%;
     display: flex;
-    border-radius: 20px;
     flex-direction: column;
-    height: 50vh;
-    border: 1px solid black;
     align-items: center;
-    justify-content: space-evenly;
-    transition: all 1s;
+    height: 60vh;
 }
 
-a, button{
+button{
     text-decoration: none;
     color: white;
     padding: 15px;
@@ -33,13 +29,14 @@ a, button{
     background-color: black;
 }
 
+label{
+    margin-bottom: 10px;
+}
+
 input{
     width: 250px;
     padding: 15px;
     border-radius: 20px;
     box-shadow: 1px 1px 10px 1px black;
-}
-
-.rn{
-    display: none;
+    margin-bottom: 15px;
 }
