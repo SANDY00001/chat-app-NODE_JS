@@ -19,9 +19,9 @@
     <script>
         const socket=io('https://chat-web-nodejs.herokuapp.com');
         let chat=document.querySelector('.chat');
-        let id='', rn='';
-        for(var i=3;i<13;i++) id+=document.cookie[i];
-        for(var i=18;i<28;i++) rn+=document.cookie[i];
+        let url=window.location.href;
+        url=new URL(url);
+        let id=url.searchParams.get('id'), rn=url.searchParams.get('rn');
         socket.auth={
             username:id,
             rn:rn
