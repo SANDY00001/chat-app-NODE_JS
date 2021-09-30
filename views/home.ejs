@@ -21,7 +21,7 @@
         let chat=document.querySelector('.chat');
         socket.auth={
             username:sessionStorage.getItem('id'),
-            rn:sessionStorage.getItem('rn'),
+            rn:sessionStorage.getItem('rn')||'7904280736',
         }
         socket.on('msg', (data)=>{
             let chat1=document.querySelector('.chat1');
