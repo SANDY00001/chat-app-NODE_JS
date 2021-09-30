@@ -26,10 +26,13 @@
             user.style.display='none';
             rn.style.display='flex';
             sessionStorage.setItem('id', input.value);
+            document.cookie=`id=${input.value}`;
         }
         function submit1(){
             let input=document.querySelector('#rn');
             sessionStorage.setItem('rn', input.value);
+            document.cookie=`rn=${input.value}`;
+            console.log(document.cookie);
         }
     </script>
 </body>
