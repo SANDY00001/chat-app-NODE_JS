@@ -8,32 +8,12 @@
     <title>userId</title>
 </head>
 <body>
-    <div class="username">
-        <label for="phone">Enter Your Phone Number</label>
-        <input type="text" name="user" placeholder="Phone Number" id="phone" required>
-        <button onclick="submit()">NEXT</button>
-    </div>
-    <form class="rn" method="POST" enctype="multipart/form-data" action="sendMsg">
-        <label for="phone">Enter Receiver Phone Number</label>
-        <input type="text" name="user" placeholder="Phone Number" id="rn" required>
-        <button onclick="submit1()">SUBMIT</button>
+    <form method="GET" enctype="multipart/form-data" action="sendMsg">
+        <label for="room">Enter Your Room Number</label>
+        <input type="text" placeholder="Your Room Number" id="room" name="id">
+        <label for="receiver">Enter the Receiver Room Number</label>
+        <input type="text" placeholder="Receiver Room Number" id="receiver" name="rn">
+        <button>Submit</button>
     </form>
-    <script>
-        function submit(){
-            let input=document.querySelector('#phone');
-            let user=document.querySelector('.username');
-            let rn=document.querySelector('.rn');
-            user.style.display='none';
-            rn.style.display='flex';
-            sessionStorage.setItem('id', input.value);
-            document.cookie=`id=${input.value}`;
-        }
-        function submit1(){
-            let input=document.querySelector('#rn');
-            sessionStorage.setItem('rn', input.value);
-            document.cookie=`rn=${input.value}`;
-            console.log(document.cookie);
-        }
-    </script>
 </body>
 </html>
