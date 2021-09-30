@@ -25,7 +25,7 @@ app.get('/', (req, res)=>{
     res.render('userId');
 });
 
-app.post('/sendMsg', (req, res)=>{
+app.get('/sendMsg', (req, res)=>{
     res.render('home'); 
 });
 
