@@ -6,6 +6,8 @@ const session=require('express-session');
 const io=new Server(httpServer);
 const multer=require('multer'); 
 
+let PORT=process.env.PORT||5000;
+
 app.set('view engine', 'ejs');
 app.set('views', 'views/');
 app.use(session({
@@ -16,7 +18,7 @@ app.use(session({
 app.use(multer().single('images'));
 app.use(express.static('views/css'));
 
-httpServer.listen(5000, ()=>console.log('listening'));
+httpServer.listen(PORT, ()=>console.log('listening'));
 
 
 app.get('/', (req, res)=>{
