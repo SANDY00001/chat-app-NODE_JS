@@ -17,7 +17,7 @@
         <button onclick="sendMsg()">Send</button>
     </div>
     <script>
-        const socket=io('https://chat-web-nodejs.herokuapp.com');
+        const socket=io('http://localhost:5000');
         let chat=document.querySelector('.chat');
         let url=window.location.href;
         url=new URL(url);
